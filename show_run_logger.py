@@ -9,12 +9,10 @@ from time import time
 from datetime import datetime
 from Exscript import Account
 from Exscript.protocols import SSH2
+from Exscript.util.interact import read_login
 
 cwd = os.getcwd()
-login = 'admin'
-# You may place your password here
-password = input('Type password\n')
-acc = Account(login, password)
+acc = read_login()
 
 
 def parser():
